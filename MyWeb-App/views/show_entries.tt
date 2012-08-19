@@ -1,0 +1,26 @@
+<table cellspacing=0 class=entries>
+	<% IF entries.size %>
+	<tr>
+		<th width=80>ID</th>
+		<th>タイトル</th>
+		<th width=150>最後の返信</th>
+	</tr>
+	<% FOREACH id IN entries %>
+	<tr>
+		<td align=center><% id.id %></td>
+		<td><% IF id.new %><b>[NEW]</b> <% END %><a href="<% blog_url %>/<% id.id %>"><% id.title %></a></td>
+		<td><% id.updated %></td>
+	</tr>
+	<% END %>
+	<% ELSE %>
+	<tr><td><em>Unbelievable.  No entries here so far</em></td></tr>
+	<% END %>
+</table>
+<div class="pager">
+<% FOREACH p IN [1..page_total] %>
+<% IF p == page_now %><b><% p %></b>
+<% ELSE %><a href="/?page=<% p %>"><% p %></a>
+<% END %>
+<% END %>
+</div>
+

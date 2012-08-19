@@ -1,0 +1,17 @@
+<table cellspacing=0 class=blog>
+	<tr class="thread">
+		<td><h2>発表</h2></td>
+	</tr>
+	<tr>
+		<form action="<% add_url %>" method=post enctype="multipart/form-data">
+		<td>
+			タイトル:<br />
+			<input type=text size=90 name=title><br />
+			内容:<br />
+			<textarea name=text rows=5 cols=90></textarea><br />
+			写真: <input type=file  name=image><br />
+			<input type=submit value=確認>
+		</td>
+		</form>
+	</tr>
+</table>

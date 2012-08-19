@@ -1,0 +1,42 @@
+/*BASIC*/
+* {margin:0;padding:0;outline:none;font-family:Myriad,Helvetica,Arial,"Meiryo","メイリオ",sans-serif;}
+html, body {width:100%;color:#000;font-size:14px;line-height:22px;background-color:#DDD;}
+body {overflow-y:scroll;*overflow-y:visible;background:url('/images/perldancer-bg.jpg') no-repeat center center;}
+* html, * html body {background-image:url(about:blank);background-attachment:fixed;}
+a, a:link, a:visited, a:active {color:#000;text-decoration:none;cursor:pointer;}
+a.a-cr, a.a-cr:link, a.a-cr:visited, a.a-cr:active {color:#03D;}
+a:hover, a.a-cr:hover {color:#03D!important;text-decoration:underline;}
+em {font-style:normal;}
+li {list-style:none;}
+img {border:none;}
+input, textarea, select {padding:5px;font-family:Myriad,Helvetica,Arial,"Meiryo","メイリオ",sans-serif;font-size:14px;}
+textarea {line-height:22px;}
+.inputTips {color:#AAA;}
+.clear {overflow:hidden;height:0;clear:both;*zoom:1;}
+
+/*CONTENT*/
+.header {margin:20px auto 0;width:800px;}
+.header h1 {height:60px;line-height:60px;font-size:36px;}
+.header .nav {height:30px;line-height:30px;}
+.header .search {float:right;}
+.header .search input {margin:0 5px;}
+
+.entries {margin:20px auto;width:800px;background:#EEE;border:#AAA solid;border-width:1px 0 0 1px;box-shadow:rgba(0,0,0,0.3) 0 0 10px;}
+.entries th {padding:5px;font-weight:bold;background:#FFF;border:#AAA solid;border-width:0 1px 1px 0;}
+.entries td {padding:5px;border:#AAA solid;border-width:0 1px 1px 0;}
+.entries td b {color:#A00;}
+
+.pager {text-align:center;}
+.pager a {margin:0 5px;color:#999;}
+
+.blog {margin:20px auto;width:800px;background:#EEE;border:#AAA solid;border-width:1px 0 0 1px;box-shadow:rgba(0,0,0,0.3) 0 0 10px;}
+.blog td {padding:15px;border:#AAA solid;border-width:0 1px 1px 0;}
+.blog .col_left {width:150px;}
+.blog .thread td {background:#FFF;border-bottom:#333 2px solid;}
+.blog em {color:#999}
+.blog h2 {font-size:18px;}
+.blog .reply textarea {resize:vertical;}
+.blog .error {color:#A00;font-weight:bold;}
+.blog .img {display:block;margin:10px;max-width:500px;}
+
+.footer {margin:0 auto;padding:30px 0;width:800px;text-align:center;}

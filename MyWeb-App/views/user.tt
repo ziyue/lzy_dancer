@@ -1,0 +1,24 @@
+<table cellspacing=0 class=entries>
+	<% IF entries.size %>
+	<tr>
+		<th width=80>ID</th>
+		<th>タイトル</th>
+		<th width=150>最後の返信</th>
+		<th width=60>削除?</th>
+	</tr>
+	<% FOREACH id IN entries %>
+	<tr>
+		<td align=center><% id.id %></td>
+		<td><a href="<% blog_url %>/<% id.id %>"><% id.title %></a></td>
+		<td><% id.updated %></td>
+		<td>
+			<form action="/user" method="post">
+			<input type=submit value=Delete > <input type=hidden name=enid value=<% id.id %> />
+			</form>
+		</td>
+	</tr>
+	<% END %>
+	<% ELSE %>
+	<tr><td><em>Unbelievable.  No entries here so far</em></td></tr>
+	<% END %>
+</table>

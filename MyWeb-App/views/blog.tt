@@ -1,0 +1,38 @@
+<table cellspacing=0 class=blog>
+	<tr class="thread">
+		<td class="col_left">
+			<% IF blog_entries.uid == 0 %>guest  
+			<% ELSE %><% blog_owner %><% END %><br />
+			<em><% blog_entries.datetime %></em>
+		</td>
+		<td>
+			<h2><% blog_entries.title %></h2>
+			<% blog_entries.content %>
+			<% IF blog_entries.photo %><img src="/uploads/<% blog_entries.photo %>" class="img" /><% END %>
+		</td>
+	</tr>
+	<% IF post_entries.size %>
+	<% FOREACH i IN post_entries %>
+	<tr class="post">
+		<td class="col_left">
+			<% i.name || 'guest' %><br />
+			<em><% i.datetime %></em>
+		</td>
+		<td>
+			<% i.content %>
+			<% IF i.photo %><img src="/uploads/<% i.photo %>" class="img" /><% END %>
+		</td>
+	</tr>
+	<% END %>
+	<% END %>
+	<tr class="reply">
+		<form action="<% post_url %>" method=post enctype="multipart/form-data">
+		<td colspan=2>
+			返信:<br />
+			<textarea name=reply rows=5 cols=90></textarea><br />
+			写真: <input type=file  name=image /><br />
+			<input type=submit value=確認>
+		</td>
+		</form>
+	</tr>
+</table>

@@ -1,0 +1,19 @@
+<table cellspacing=0 class=blog>
+	<tr class="thread">
+		<td><h2>新しい会員登録</h2></td>
+	</tr>
+	<tr>
+		<form action="<% reg_url %>" method=post>
+		<td>
+			<% IF err %><div class=error>あれ? <% err %></div><% END %>
+			会員ID:<br />
+			<input type=text name=username size=30><br />
+			パスワード:<br />
+			<input type=password name=password size=30><br />
+			パスワード(再入力):<br />
+			<input type=password name=password2 size=30><br /><br />
+			<input type=submit value=登録>
+		</td>
+		</form>
+	</tr>
+</table>
